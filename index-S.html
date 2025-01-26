@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Login</title>
+    <link rel="stylesheet" href="../public/signstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form method="POST" action="/signup">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <p>Already have an account? <a href="#" onclick="toggleForms()">Log in</a></p>
+
+        <!-- Login Form -->
+        <div id="loginForm" style="display:none;">
+            <h2>Login</h2>
+            <form method="POST" action="/login">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required><br>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
+        </div>
+
+    </div>
+
+    <!-- Script to toggle between forms -->
+    <script>
+        function toggleForms() {
+            const signupForm = document.querySelector('form[action="/signup"]');
+            const loginForm = document.getElementById('loginForm');
+            if (signupForm.style.display === "none") {
+                signupForm.style.display = "block";
+                loginForm.style.display = "none";
+            } else {
+                signupForm.style.display = "none";
+                loginForm.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
