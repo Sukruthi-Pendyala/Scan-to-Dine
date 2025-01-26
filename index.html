@@ -17,10 +17,7 @@
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign in</button>
-
-  </nav>
+   
     <div class="container">
         <h2>Sign Up</h2>
         <form method="POST" action="/signup">
@@ -43,13 +40,13 @@
                 <input type="text" id="login-username" name="username" required><br>
                 <label for="login-password">Password:</label>
                 <input type="password" id="login-password" name="password" required><br>
-                <button type="submit">Login</button>
+                <button type="submit" style="width:auto;">Login</button>
             </form>
             <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></p>
         </div>
 
     </div>
-
+</nav>
     <!-- Script to toggle between forms -->
     <script>
         function toggleForms() {
