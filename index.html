@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="../public/signstyles.css">
 </head>
 <body>
+    <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Payment</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign in</button>
+
+  </nav>
     <div class="container">
         <h2>Sign Up</h2>
         <form method="POST" action="/signup">
@@ -16,7 +30,7 @@
             <input type="text" id="email" name="email" required><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br>
-            <button type="submit">Sign Up</button>
+            <button type="submit" style="width:auto;">Sign Up</button>
         </form>
 
         <p>Already have an account? <a href="#" onclick="toggleForms()">Log in</a></p>
